@@ -1,29 +1,42 @@
-#CS 441- Engineering Distributed Objects for Cloud Computing
-#**_**NAME: JEET MEHTA**_**
-#UIN: 668581235
-##Homework 2 - Log File Generator
-##Overview
+# CS 441- Engineering Distributed Objects for Cloud Computing
+
+# **_**NAME: JEET MEHTA**_**
+
+# UIN: 668581235
+
+## Homework 2 - Log File Generator
+
+## Overview
+
 The objective of this homework was to process the log generator file using **Hadoop Map Reduce Framework**. This will help in parallel processing of the data.
-##Instructions
-###My Environment
+
+## Instructions
+
+### My Environment
+
 The project was developed using the following environment
 1) Windows OS
 2) IDE: IntelliJ IDEA 2021
 3) VMWare Workstation 16 Pro
 4) Hortonworks 3.0.1 Sandbox 
-###Pre-requisite
+### Pre-requisite
+
 1) Java 1.8 needs to be installed on the system
 2) Setup the HDP Sandbox
 3) SBT needs to be installed on your system
 
-###Demo of how to deploy the map-reduce jobs on the AWS EMR
+### Demo of how to deploy the map-reduce jobs on the AWS EMR
+
 Click on this [link](https://www.youtube.com/watch?v=yhbI30JZJ0o) to see how to deploy your Map Reduce on AWS EMR
 
-###Working of the Map Reduce:
+### Working of the Map Reduce:
+
 We start off by creating a log generator dataset. We have created a log file consisting of 50,000 log messages. This will be used to implement all the four jobs to be performed.
 We then perform tasks for all the four [functionalities](https://github.com/0x1DOCD00D/LogFileGenerator#functionality) mentioned.
 
-###MapReduce Jobs
+
+### MapReduce Jobs
+ 
 1) Job 1:
    Mapper Class: Mapper_Job1
    Reducer Class: Reducer_Job1
@@ -46,7 +59,8 @@ We then perform tasks for all the four [functionalities](https://github.com/0x1D
    Goal: For each of the message type we have to compute the total number of characters it's string instances has which are found in the designated Regex pattern.
    ![](C:\Users\ASUS\Desktop\Mapper_Job4.png)
 
-###Running these jobs
+### Running these jobs
+
 1. Clone this repo onto your system
 2. Open command line of your OS and browse to project directory
 3. Build using(In the Intellij terminal or cmd in Windows):
@@ -56,10 +70,12 @@ We then perform tasks for all the four [functionalities](https://github.com/0x1D
 6. Run using:
    `hadoop jar jarname.jar inp_dir out_dir`
 
-###OUTPUT:
+### OUTPUT:
+
 This is the sample output that I have received for each of the jobs.
 
-####Output for Map_Reduce Job1:
+#### Output for Map_Reduce Job1:
+
 14610=DEBUG,1
 14611=INFO,1
 14611=WARN,1
@@ -71,7 +87,8 @@ This is the sample output that I have received for each of the jobs.
 14617=INFO,1
 14617=WARN,1
 
-####Output for Map_Reduce Job2:
+#### Output for Map_Reduce Job2:
+
 7,14618
 7,14669
 7,14886
@@ -83,10 +100,12 @@ This is the sample output that I have received for each of the jobs.
 4,14671
 4,14692
 
-####Output for Map_Reduce Job3:
+#### Output for Map_Reduce Job3:
+
 DEBUG=10,8737
 ERROR=10,843
 
-###Output for Map_Reduce Job4:
+### Output for Map_Reduce Job4:
+
 INFO,10
 WARN,10
