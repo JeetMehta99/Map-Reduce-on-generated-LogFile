@@ -29,7 +29,3 @@ class ConfigTesting extends AnyFlatSpec with Matchers {
     val config: Config = ConfigFactory.load("application.conf")
     config.getInt("randomLogGenerator.MinString") shouldBe Int
   }
-      
-
-       
-	
